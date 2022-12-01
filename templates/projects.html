@@ -27,29 +27,79 @@
 
 <h3 class="h3">What others say about Atlast Creative</h3>
 
-<div id="myBtnContainer">
+<div class="container-selection" id="myBtnContainer">
   <button class="btn-projects active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn-projects" onclick="filterSelection('cars')"> Cars</button>
-  <button class="btn-projects" onclick="filterSelection('animals')"> Animals</button>
-  <button class="btn-projects" onclick="filterSelection('fruits')"> Fruits</button>
-  <button class="btn-projects" onclick="filterSelection('colors')"> Colors</button>
+  <button class="btn-projects" onclick="filterSelection('websites')"> Websites</button>
+  <button class="btn-projects" onclick="filterSelection('apps')"> Apps</button>
+  <button class="btn-projects" onclick="filterSelection('branding')"> Branding</button>
 </div>
 
 <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
 <div class="container">
-  <div class="filterDiv cars">BMW</div>
-  <div class="filterDiv colors fruits">Orange</div>
-  <div class="filterDiv cars">Volvo</div>
-  <div class="filterDiv colors">Red</div>
-  <div class="filterDiv cars animals">Mustang</div>
-  <div class="filterDiv colors">Blue</div>
-  <div class="filterDiv animals">Cat</div>
-  <div class="filterDiv animals">Dog</div>
-  <div class="filterDiv fruits">Melon</div>
-  <div class="filterDiv fruits animals">Kiwi</div>
-  <div class="filterDiv fruits">Banana</div>
-  <div class="filterDiv fruits">Lemon</div>
-  <div class="filterDiv animals">Cow</div>
+  <div class="filterDiv websites">
+    <img src="static/images/1.png" class="img-filter" alt="Net Zero Edinburgh">
+    <div class="card__inner">
+      <a href="https://netzeroedinburgh.org/" class="h2-filter">Net Zero Edinburgh</a>
+    </div>
+  </div>
+
+  <div class="filterDiv branding">
+    <img src="static/images/2.png" class="img-filter" alt="Atlas Creative">
+    <div class="card__inner">
+      <a href="https://www.figma.com/file/fuEtpBGZmhbFDXyOM2rUBT/Untitled?node-id=0%3A1&t=K2Ty6Ry72fuU8U8R-1" class="h2-filter">Atlas Creative</a>
+    </div>
+  </div>  
+
+
+  <div class="filterDiv apps">
+    <img src="static/images/3.png" class="img-filter" alt="Home grown">
+    <div class="card__inner">
+      <a href="https://www.figma.com/file/qRhBC4bdiz9UCrNXB5s2Ru/Home-grown?node-id=0%3A1&t=qRStCEL0mcb7AbSX-1" class="h2-filter">Home grown</a>
+    </div>
+  </div>
+
+  <div class="filterDiv websites">
+    <img src="static/images/4.png" class="img-filter" alt="Queen Bee">
+    <div class="card__inner">
+      <a href="https://marina-moreno-queenbee.netlify.app/index.html" class="h2-filter">Queen Bee</a>
+    </div>
+  </div>
+
+  <div class="filterDiv websites">
+    <img src="static/images/5.png" class="img-filter" alt="logo">
+    <div class="card__inner">
+      <a href="https://everyonesedinburgh.org/" class="h2-filter">Everyone's Edinburgh</a>
+    </div>
+  </div>
+
+  <div class="filterDiv websites apps">
+    <img src="static/images/6.png" class="img-filter" alt="Let's talk">
+    <div class="card__inner">
+      <a href="https://www.figma.com/file/1gYZnlBxrlhXafABmP1RGr/Untitled?node-id=0%3A1&t=AsQwcJXFw4z3lu49-1" class="h2-filter">Let's talk</a>
+    </div>
+  </div>
+
+  <div class="filterDiv branding">
+    <img src="static/images/7.png" class="img-filter" alt="onstruction Work Tasters">
+    <div class="card__inner">
+      <a href="https://www.canva.com/design/DAFM89qoMoI/t_43bN_4baE2r6TNgliu_g/view?utm_content=DAFM89qoMoI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="h2-filter">Construction Work Tasters</a>
+    </div>
+  </div>
+
+  <div class="filterDiv websites">
+    <img src="static/images/8.png" class="img-filter" alt="Let's talk">
+    <div class="card__inner">
+      <a href="https://marinamorenommr.github.io/lets-talk/" class="h2-filter">Let's talk</a>
+    </div>
+  </div>
+
+  <div class="filterDiv apps">
+    <img src="static/images/9.png" class="img-filter" alt="Find My Classroom">
+    <div class="card__inner">
+      <a href="https://www.figma.com/proto/KRKkyBGoKmla3485zhCkng/Uni-modules?node-id=116%3A181&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=116%3A181" class="h2-filter">Find My Classroom</a>
+    </div>
+  </div>
+  
 </div>
 
 <script>

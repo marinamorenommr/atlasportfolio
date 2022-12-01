@@ -374,17 +374,25 @@ button#prev {
 
 .container {
   overflow: hidden;
+  margin-left: 50px;
+}
+
+.container-selection {
+  overflow: hidden;
+  margin-left: 70px;
 }
 
 .filterDiv {
+  position: relative;
   float: left;
-  background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
   text-align: center;
-  margin: 2px;
+  margin: 20px;
   display: none; /* Hidden by default */
+  overflow: hidden;
+}
+
+.img-filter{
+  border-radius: 20px;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -410,4 +418,49 @@ button#prev {
 .btn-projects.active {
   background-color: #666;
   color: white;
+}
+
+/* Assigning properties to inner content of card  */
+.filterDiv .card__inner {
+  border-radius: 20px;
+  background-color: #A4C0C0;
+  color: #fff5ef;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s ease 0s;
+  padding-top: 130px;
+  text-align: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  text-decoration: none;
+}
+   
+/* On hovering card opacity of content must be 1*/
+.filterDiv:hover .card__inner {
+  opacity: 5;
+}
+
+.card__inner p {
+  overflow-y: scroll;
+  height: 87%;
+  padding-right: 1rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.h2-filter{
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 30px;
+  color: #fff5ef;
+  line-height: 110%;
+  margin-top: 50px;
+  text-align: center;
+  text-decoration: none;
 }
