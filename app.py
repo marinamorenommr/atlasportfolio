@@ -35,7 +35,7 @@ def addrec():
             cur.execute("INSERT INTO contacts (name,company,email,message) VALUES (?,?,?,?)",(name,company,email,message) )
             
             con.commit()
-            msg = "Record successfully added"
+            msg = "Thank you for your message!"
       except:
          con.rollback()
          msg = "error in insert operation"

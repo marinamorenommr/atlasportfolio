@@ -7,6 +7,8 @@
    
     <!-- My CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
 
 <body>    
@@ -22,23 +24,51 @@
       </div>
     </div>
   </header>
+
+  <div class="row">
+
+    <div class="column-contact left">
+      <h3 class="h2-contact">Let's talk!</h3>  
+      <p class="p-contact">I’m an approachable problem solver who values honesty and clarity. I’m friendly, and all about a collaborative process. I see the whole branding picture, and view a website as one integral part of an overall brand strategy. Brainstorming is my jam, and I love it almost as much as chatting.</p>
+    </div>
+
+      <!-- This contact form will collect information from the user and store it into a database -->
+
+    <div class="column-contact right">
+      <div class="contact-form-container">
+        <form action = "{{ url_for('addrec') }}" method = "POST" class="contact-form">
+          <p class="p-contact-form">Name</p>
+          <input type = "text" name = "name" class="contact-form-imput"/>
+        
+          <p class="p-contact-form">Company</p>
+          <input type = "text" name = "company" class="contact-form-imput"/>
+        
+          <p class="p-contact-form">Email</p>
+          <input type = "text" name = "email" class="contact-form-imput"/>
+        
+         <p class="p-contact-form">Message</p>
+          <input type = "text" name = "message" class="contact-form-imput"/><br>
+          <button type = "submit" value = "submit" class="submit-button">Send!</button>
+          <br>
+        </div>
+        </form>
+      </div> 
+    </div>
+  </div>
+
+
+<footer>
+  <div class="footer">
+  <div class="row">
+    <a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/atlas_creativestudio/"><i class="fa fa-instagram"></i></a>
+    <a href="https://twitter.com/home"><i class="fa fa-twitter"></i></a>
+  </div>
+  
+  <div class="row">
+  Copyright © 2022 Atlas Creative Studio - All rights reserved 
+  </div>
+  </div>
+  </footer>
 </body>
-
-<form action = "{{ url_for('addrec') }}" method = "POST">
-  <h3>Student Information</h3>
-  Name<br>
-  <input type = "text" name = "name" /></br>
-  
-  Company<br>
-  <textarea name = "company" ></textarea><br>
-  
-  Email<br>
-  <input type = "text" name = "email" /><br>
-  
-  Message<br>
-  <input type = "text" name = "message" /><br>
-  <input type = "submit" value = "submit" /><br>
-</form>
-
-
 </html>

@@ -6,6 +6,8 @@
     <title>Atlas Creative</title>
     <!-- My CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <!-- Social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
 <body>    
@@ -23,6 +25,7 @@
     </div>
   </header>
 
+      <!-- Home header -->
   <div class="hero-image">
     <div class="hero-text">
       <h1>Hi there,
@@ -31,6 +34,8 @@
       <a href="{{ url_for('about') }}" target="_parent"><button class="home-button">What is Atlas Creative?</button></a>
     </div>
   </div>
+
+   <!-- Colums with information -->
 
   <div class="row info-box">
     <div class="col-img">
@@ -81,7 +86,8 @@
 </div>
 
 
-<!-- testimonials-->
+
+<!-- Slider testimonials-->
   
 <h3 class="h3-testimonial-title">What others say about Atlast Creative</h3>
 
@@ -92,42 +98,43 @@
   <button id="prev">&lt;</button>
   <button id="next">&gt;</button>
   
-  </div>
+</div>
   
+<!-- Javascript that stores the data and also makes the slider work-->
+
+<script>
   
-  <script>
-  
-  //Testimonial Data
+//Testimonial Data
   const testimonials = [
     {
-      name: "Eva Sawyer",
-      job: "CEO, Fashworks",
+      name: "Fred Smith",
+      job: "Everyone's Edinburgh",
       testimonial:
-        "Neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur",
+        "Marina helped us throughout the entire endeavour, going above and beyond what we expected to do. Her ability to recognise and convey our important points in a fresh and inventive way gave us a great deal of trust in her.",
     },
     {
-      name: "Katey Topaz",
-      job: "Developer, TechCrew",
+      name: "Katy Tulsa",
+      job: "Net Zero Edinburgh",
       testimonial:
-        "Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla",
+        "My request for assistance with problems with a Wordpress website was promptly answered by Marina, who was very helpful. She was well-versed in everything!",
     },
     {
-      name: "Jae Robin",
-      job: "UI Designer, Affinity Agency",
+      name: "Robin Johnson",
+      job: "Queen Bee",
       testimonial:
-        "Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis",
+        "One of the best programmers out there without a doubt. When I'm lost, I always turn to Marina, and she never fails to provide what I need. smart, reliable, and competent. I can’t recommend her highly enough.",
     },
     {
-      name: "Nicola Blakely",
-      job: "CEO,Zeal Wheels",
+      name: "Nicola Blake",
+      job: "Home Grown",
       testimonial:
-        "Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+        "Always willing to assist, extremely talented, consistently meets deadlines, diligent, and reliable. According to my experience, no project is too difficult, and with Marina is great at simplifying highly complex sector.",
     },
   ];
   
-  //Current Slide
+
   let i = 0;
-  //Total Slides
+
   let j = testimonials.length;
   
   let testimonialContainer = document.getElementById("testimonial-container");
@@ -151,14 +158,23 @@
     `;
   };
   window.onload = displayTestimonial;
+
   
-  
-  </script>
+</script>
 
 <footer>
-  <p>Author: Hege Refsnes<br>
-  <a href="mailto:hege@example.com">hege@example.com</a></p>
-</footer>
+  <div class="footer">
+  <div class="row">
+  <a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/atlas_creativestudio/"><i class="fa fa-instagram"></i></a>
+  <a href="https://twitter.com/home"><i class="fa fa-twitter"></i></a>
+  </div>
+  
+  <div class="row">
+  Copyright © 2022 Atlas Creative Studio - All rights reserved 
+  </div>
+  </div>
+  </footer>
 
 </body>
 </html>
