@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atlas Creative</title>
+   
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+
+<body>    
+  <header>
+    <div class="header">
+      <a href="{{ url_for('home') }}" class="img-logo">
+        <img src="static/images/logo.png" href="{{ url_for('home') }}"alt="logo" class="img-logo">
+      </a>
+      <div class="header-right">
+        <a href="{{ url_for('about') }}" class="nav-item">ABOUT</a>
+        <a href="{{ url_for('projects') }}" class="nav-item">PROJECTS</a>
+        <a href="{{ url_for('contact') }}" class="nav-item active">CONTACT</a>
+      </div>
+    </div>
+  </header>
+</body>
+
+<form action = "{{ url_for('addrec') }}" method = "POST">
+  <h3>Student Information</h3>
+  Name<br>
+  <input type = "text" name = "name" /></br>
+  
+  Company<br>
+  <textarea name = "company" ></textarea><br>
+  
+  Email<br>
+  <input type = "text" name = "email" /><br>
+  
+  Message<br>
+  <input type = "text" name = "message" /><br>
+  <input type = "submit" value = "submit" /><br>
+</form>
+
+
+</html>

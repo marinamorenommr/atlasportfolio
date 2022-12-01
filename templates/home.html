@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atlas Creative</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+
+<body>    
+	<header>
+    <div class="header">
+      <a href="{{ url_for('home') }}" class="img-logo">
+        <img src="static/images/logo.png" href="{{ url_for('home') }}"alt="logo" class="img-logo">
+      </a>
+      <div class="header-right">
+        <a href="{{ url_for('about') }}" class="nav-item">ABOUT</a>
+        <a href="{{ url_for('projects') }}" class="nav-item">PROJECTS</a>
+        <a href="{{ url_for('contact') }}" class="nav-item">CONTACT</a>
+        
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Hi there,
+        <br>let's work together!
+      </h1>
+      <a href="{{ url_for('about') }}" target="_parent"><button class="home-button">What is Atlas Creative?</button></a>
+    </div>
+  </div>
+
+  <div class="row info-box">
+    <div class="col-img">
+    </div>
+    <div class="col-img-right">
+      <img src="static/images/home-1.png" alt="graphic" class="home-small-img">
+    </div> 
+</div>
+
+<div class="row-home-info">
+
+    <div class="column left">
+      <img src="static/images/atlas_info.png" alt="atlas logo" class="atlas-image">
+      <h1 class="h1-info-box">best 
+        <br>creative
+        <br>& modern 
+        <br>designs
+      </h1>
+    </div>
+
+
+    <div class="column right">
+      <h3 class="h3-info-box">We are a digital creative studio driven by curiosity, concepts and craft. Turning ideas into real life products is our calling. </h3>
+      <br>
+      <p class="p-info-box">With a background in design, I work closely with design focused teams to build websites and microsites for companies and individuals. I have years of experience working and collaborating on product teams and leading engineering efforts. </p>
+      <p class="p-info-box">With my experience in UI and Creaitve design, I solve product problems and build appealing usable user experiences.</p>
+      
+
+      <div class="row info-box">
+        <div class="col">
+        </div>
+        <div class="col">
+          <h2 class="h2-numbers">+4</h2>
+          <p class="p-numbers">Years of Experience</p>
+        </div>
+        <div class="col">
+          <h2 class="h2-numbers">+15</h2>
+          <p class="p-numbers">Completed Projects</p>
+        </div> 
+        <div class="col">
+          <h2 class="h2-numbers">+5</h2>
+          <p class="p-numbers">Happy clients</p>
+        </div> 
+        <div class="col">
+        </div> 
+      </div>
+    </div>
+</div>
+
+
+<!-- testimonials-->
+  
+<h3 class="h3-testimonial-title">What others say about Atlast Creative</h3>
+
+<div class="slideshow-container">
+
+  <div class="testimonial-container" id="testimonial-container"></div>
+  
+  <button id="prev">&lt;</button>
+  <button id="next">&gt;</button>
+  
+  </div>
+  
+  
+  <script>
+  
+  //Testimonial Data
+  const testimonials = [
+    {
+      name: "Eva Sawyer",
+      job: "CEO, Fashworks",
+      testimonial:
+        "Neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur",
+    },
+    {
+      name: "Katey Topaz",
+      job: "Developer, TechCrew",
+      testimonial:
+        "Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla",
+    },
+    {
+      name: "Jae Robin",
+      job: "UI Designer, Affinity Agency",
+      testimonial:
+        "Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis",
+    },
+    {
+      name: "Nicola Blakely",
+      job: "CEO,Zeal Wheels",
+      testimonial:
+        "Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+    },
+  ];
+  
+  //Current Slide
+  let i = 0;
+  //Total Slides
+  let j = testimonials.length;
+  
+  let testimonialContainer = document.getElementById("testimonial-container");
+  let nextBtn = document.getElementById("next");
+  let prevBtn = document.getElementById("prev");
+  
+  nextBtn.addEventListener("click", () => {
+    i = (j + i + 1) % j;
+    displayTestimonial();
+  });
+  prevBtn.addEventListener("click", () => {
+    i = (j + i - 1) % j;
+    displayTestimonial();
+  });
+  
+  let displayTestimonial = () => {
+    testimonialContainer.innerHTML = `
+      <p>${testimonials[i].testimonial}</p>
+      <h4>${testimonials[i].name}</h4>
+      <h6>${testimonials[i].job}</h6>
+    `;
+  };
+  window.onload = displayTestimonial;
+  
+  
+  </script>
+
+<footer>
+  <p>Author: Hege Refsnes<br>
+  <a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+
+</body>
+</html>
